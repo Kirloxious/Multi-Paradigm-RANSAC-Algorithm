@@ -2,3 +2,4 @@
 date: jan 17
 https://sciencing.com/vector-perpendicular-8419773.html 
 https://en.wikipedia.org//wiki/Cross_product#Computing
+https://stackoverflow.com/questions/23463634/java-data-structure-that-has-efficient-add-delete-and-random

@@ -4,7 +4,7 @@
  */
 
 import java.lang.Math;
-import java.util.HashMap;
+
 
 /**
  * This class defines a 3d point using x, y, z coordinates. 
@@ -17,12 +17,6 @@ public class Point3D {
     
     //Point Coords
     private double x, y, z;
-
-    //Cluster label
-    private int clusterLabel;
-
-
-
 
 
     /******************** Contructor ******************/
@@ -38,11 +32,6 @@ public class Point3D {
         this.x = x;
         this.y = y;
         this.z = z;
-        
-        //initialise cluster label -1 to indicate undefined
-        this.clusterLabel = -1;
-
-        //initialise RGB to 0,0,0 as default values
 
     }
 
@@ -86,28 +75,7 @@ public class Point3D {
 
     }
 
-    public HashMap<String, Double> vectorCrossProduct(Point3D pt){
-        // a x b = i(a2b3 - a3b2) + j(a3b1 - a1b3) + k(a1b2 - a2b1) = N
-        HashMap<String, Double> result = new HashMap<>();
-        double a1 = this.getX();
-        double a2 = this.getY();
-        double a3 = this.getZ();
-        
-        double b1 = pt.getX();
-        double b2 = pt.getY();
-        double b3 = pt.getZ();
-        
-        
-        double i = (a2*b3 - a3*b2);
-        double j = (a3*b1 - a1*b3);
-        double k = (a1*b2 - a2*b1);
-        
-        result.put("i", i);
-        result.put("j", j);
-        result.put("k", k);
-        
-        return result;
-    }
+
 
 
     /*********** SETTERS & GETTERS  **************/
@@ -140,26 +108,6 @@ public class Point3D {
     public double getZ() {
         return this.z;
     }
-
-    
-    
-    /** 
-     * Returns the value of clusterLabel.
-     * @return int
-     */
-    public int getClusterLabel(){
-        return this.clusterLabel;
-    }
-
-    
-    /** 
-     * Set the value of clusterLabel.
-     * @param clusterLabel
-     */
-    public void setClusterlabel(int clusterLabel){
-        this.clusterLabel = clusterLabel;
-    }
-    
     
     
     /** 
@@ -167,7 +115,7 @@ public class Point3D {
      */
     @Override
     public String toString() {
-        return getX() + ", " + getY() + ", " + getZ() + ", " + getClusterLabel();
+        return getX() + ", " + getY() + ", " + getZ();
     }
     
 }
