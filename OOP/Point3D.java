@@ -22,7 +22,7 @@ public class Point3D {
     /******************** Contructor ******************/
 
     /**
-     * Creates a new point and sets cluster label to -1 indicating its undefined.
+     * Creates a new point.
      * 
      * @param x
      * @param y
@@ -65,6 +65,11 @@ public class Point3D {
         return distance;
     }
 
+    /**
+     * Calculates the vector between two points.
+     * @param pt
+     * @return {@code Point3D}
+     */
     public Point3D calculatePointVector(Point3D pt){
         
         double x = pt.getX() - this.getX();
@@ -76,12 +81,10 @@ public class Point3D {
     }
 
 
-
-
     /*********** SETTERS & GETTERS  **************/
 
     /**
-     * Returns x value of a {@link Point3D}.
+     * Returns x value of a {@code Point3D}.
      * @return
      */
     public double getX() {
@@ -90,7 +93,7 @@ public class Point3D {
     
     
     /** 
-     * Returns y value of a {@link Point3D}.
+     * Returns y value of a {@code Point3D}.
      * 
      * @return double
      */
@@ -100,7 +103,7 @@ public class Point3D {
 
     
     /** 
-     * Returns z value of a {@link Point3D}.
+     * Returns z value of a {@code Point3D}.
      * 
      * 
      * @return double
