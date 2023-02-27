@@ -14,7 +14,7 @@ public class Plane3D {
     //Points defining the plane
     private Point3D p1, p2, p3;
 
-    //Plane equation scalars
+    //Plane equation coefficients
     private double a, b, c, d;
 
     //Plane point cloud
@@ -42,7 +42,7 @@ public class Plane3D {
 
 
     /**
-     * Creates the plane using the scalars.
+     * Creates the plane using the coefficients.
      * @param a
      * @param b
      * @param c

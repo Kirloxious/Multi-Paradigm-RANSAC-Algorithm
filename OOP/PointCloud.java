@@ -18,7 +18,7 @@ import java.util.Map;
  * It uses an Arraylist to store the points & a hashmap to store the index of the points in the array
  * @author Alexandre Ringuette
  */
-public class PointCloud {
+public class PointCloud implements Iterable<Point3D>{
     
     /******************** Instances variables ********************/
 
@@ -114,7 +114,6 @@ public class PointCloud {
         try (PrintWriter writer = new PrintWriter(filename)) {
             final String FILE_HEADER = "x	y	z";
             writer.append(FILE_HEADER);
-            
             //write every point to the file
             for(Point3D p: this.pointList){
                 writer.append("\n");
@@ -149,14 +148,6 @@ public class PointCloud {
      */
     public int size(){
         return this.pointList.size();
-    }
-    
-    /** 
-     * Returns the point cloud.
-     * @return List<Point3D>
-     */
-    public List<Point3D> getPointList(){
-        return this.pointList;
     }
 
     /**
