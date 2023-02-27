@@ -1,1 +1,2 @@
-"# Intergrator-Project" 
+Multi-Paradigm RANSAC Algorithm
+
