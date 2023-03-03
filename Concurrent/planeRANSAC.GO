@@ -182,7 +182,7 @@ func main() {
 		}
 
 		wg.Add(1)
-		DominantPlaneIdentifier(FanIn(&wg, stop, supportingPointsStream), &bestSupport)
+		DominantPlaneIdentifier(&wg, stop, FanIn(&wg, stop, supportingPointsStream), &bestSupport)
 
 		close(stop)
 		wg.Wait()
